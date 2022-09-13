@@ -30,6 +30,16 @@ export default function LeftAvatars({avatar}) {
         border: '1px solid currentColor',
         content: '""',
       },
+      // '&::before': {
+      //   position: 'absolute',
+      //   color: "black",
+      //   width: '100%',
+      //   height: '100%',
+      //   borderRadius: '50%',
+      //   animation: 'ripple 1.2s infinite ease-in-out',
+      //   border: '1px solid currentColor',
+      //   content: '"3"',
+      // },
       '@keyframes ripple': {
         '0%': {
           transform: 'scale(.8)',
@@ -47,7 +57,7 @@ export default function LeftAvatars({avatar}) {
 
   return (
     <>
-      <Stack direction="column" spacing={2} sx={{ display:'flex',flexDirection:'column',justifyContent:'center', alignItems: 'center'}} >
+      <Stack direction="column" spacing={2} sx={{ display:'flex',flexDirection:'column',justifyContent:'center', alignItems: 'center',my:1}} >
       <StyledBadge
         overlap="circular"
         anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
