@@ -2,7 +2,7 @@ import React from 'react'
 import  Box from "@mui/material/Box";
 import Grid from '@mui/material/Grid';
 import LeftAvatars from './LeftAvatars';
-import TestingBlock from './TestingBlock';
+// import TestingBlock from './TestingBlock';
 export default function Main() {
   return (
     <Grid container>
