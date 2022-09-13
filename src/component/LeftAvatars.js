@@ -19,15 +19,15 @@ export default function LeftAvatars({avatar}) {
     '& .MuiBadge-badge': {
       backgroundColor: '#44b700',
       color: '#44b700',
-      boxShadow: `0 0 0 1px ${theme.palette.background.paper}`,
+      boxShadow: `0 0 0 1.5px ${theme.palette.background.paper}`,
       '&::after': {
         position: 'absolute',
 
         width: '100%',
         height: '100%',
         borderRadius: '50%',
-        animation: 'ripple 1.2s infinite ease-in-out',
-        border: '1px solid currentColor',
+        animation: 'ripple 2s infinite ease-in-out',
+        border: '3px solid currentColor',
         content: '""',
       },
       // '&::before': {
@@ -46,7 +46,7 @@ export default function LeftAvatars({avatar}) {
           opacity: 1,
         },
         '100%': {
-          transform: 'scale(1.3)',
+          transform: 'scale(1.2)',
           opacity: 0,
         },
       },
