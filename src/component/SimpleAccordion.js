@@ -10,6 +10,7 @@ export default function SimpleAccordion() {
     <>
       <Accordion>
         <AccordionSummary
+          sx={{ backgroundColor: "#2f3136" }}
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"

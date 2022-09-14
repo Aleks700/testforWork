@@ -162,7 +162,7 @@ export default function RigthColumnOffline({ avatar }) {
                     color: "black",
                   }}
                 >
-                  World of Tanks 1
+                  Whitcher
                 </Typography>
               </Stack>
             </Box>
@@ -264,7 +264,7 @@ export default function RigthColumnOffline({ avatar }) {
                     color: "black",
                   }}
                 >
-                  World of Tanks 1
+                  Dota
                 </Typography>
               </Stack>
             </Box>

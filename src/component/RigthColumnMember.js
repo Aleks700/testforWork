@@ -138,7 +138,7 @@ export default function RigthColumnMember({ avatar }) {
                     color: "black",
                   }}
                 >
-                  World of Tanks 1
+                  CS GO
                 </Typography>
               </Stack>
             </Box>
@@ -189,7 +189,7 @@ export default function RigthColumnMember({ avatar }) {
                     color: "black",
                   }}
                 >
-                  CS GO
+                  Dota
                 </Typography>
               </Stack>
             </Box>
@@ -240,7 +240,7 @@ export default function RigthColumnMember({ avatar }) {
                     color: "black",
                   }}
                 >
-                  World of Tanks 1
+                  Whitcher
                 </Typography>
               </Stack>
             </Box>

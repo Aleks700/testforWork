@@ -6,7 +6,8 @@ import RigthColumnOnline from "./RigthColumnOnline";
 import RigthColumnMember from "./RigthColumnMember";
 import RigthColumnOffline from "./RigthColumnOffline";
 import SimpleAccordion from "./SimpleAccordion";
-// import ButtonAppBar from "./ButtonAppBar";
+import { Stack } from "@mui/system";
+import ButtonAppBar from "./ButtonAppBar";
 import PushPinIcon from "@mui/icons-material/PushPin";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import PeopleAltIcon from "@mui/icons-material/PeopleAlt";
@@ -35,7 +36,8 @@ export default function Main() {
         <Grid
           xs={3}
           sx={{
-            backgroundColor: "#36393f",
+            backgroundColor: "#2f3136",
+            // backgroundColor: "#36393f",
             borderTopLeftRadius: "10px",
             borderBottomLeftRadius: "10px",
           }}
@@ -101,7 +103,26 @@ export default function Main() {
           </Box>
           <Grid xs={12} container>
             <Grid xs={8} sx={{ backgroundColor: "#36393f" }}>
-              item
+              <Box
+                sx={{
+                  p: 3,
+                  backgroundColor: "white",
+                  display: "flex",
+                  height: "65%",
+                }}
+              ></Box>
+              <Box
+                sx={{
+                  p: 3,
+                  backgroundColor: "red",
+                  display: "flex",
+                  height: "10%",
+                }}
+              >
+                <ButtonAppBar></ButtonAppBar>
+              </Box>
+
+              {/* <Stack>item</Stack> */}
             </Grid>
             <Grid
               xs={4}
