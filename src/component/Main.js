@@ -16,6 +16,7 @@ import { Typography } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import AlternateEmailOutlinedIcon from "@mui/icons-material/AlternateEmailOutlined";
 import HelpOutlinedIcon from "@mui/icons-material/HelpOutlined";
+import ListItem from "./ListItem";
 
 // import TestingBlock from './TestingBlock';
 export default function Main() {
@@ -37,12 +38,12 @@ export default function Main() {
           xs={3}
           sx={{
             backgroundColor: "#2f3136",
-            // backgroundColor: "#36393f",
             borderTopLeftRadius: "10px",
             borderBottomLeftRadius: "10px",
           }}
         >
           <SimpleAccordion></SimpleAccordion>
+          <ListItem></ListItem>
         </Grid>
         <Grid xs={9} sx={{ display: "flex", flexDirection: "column" }}>
           <Box
@@ -60,14 +61,11 @@ export default function Main() {
                 <Box
                   sx={{
                     backgroundColor: "#36393f",
-                    // backgroundColor: "yellow",
                     height: "100%",
                     display: "flex",
                     alignItems: "center",
                     px: 2,
                     borderRight: "3px ",
-                    // justifyContent: "end",
-                    // marginLeft: "auto",
                   }}
                 >
                   <Typography sx={{ color: "white" }}>#Welcome</Typography>
@@ -106,15 +104,14 @@ export default function Main() {
               <Box
                 sx={{
                   p: 3,
-                  backgroundColor: "white",
                   display: "flex",
-                  height: "65%",
+                  height: "75%",
                 }}
               ></Box>
               <Box
                 sx={{
                   p: 3,
-                  backgroundColor: "red",
+                  // backgroundColor: "red",
                   display: "flex",
                   height: "10%",
                 }}
