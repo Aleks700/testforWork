@@ -50,6 +50,7 @@ export default function Main() {
               alignItems: "center",
               backgroundColor: "#36393f",
               borderBottom: "2px solid #313439",
+              borderRight: "2px solid #313439",
             }}
           >
             <Grid container>
@@ -62,6 +63,7 @@ export default function Main() {
                     display: "flex",
                     alignItems: "center",
                     px: 2,
+                    borderRight: "3px ",
                     // justifyContent: "end",
                     // marginLeft: "auto",
                   }}
@@ -80,7 +82,7 @@ export default function Main() {
                   </Box>
                 </Box>
               </Grid>
-              <Grid xs={4} sx={{ backgroundColor: "red" }}>
+              <Grid xs={4} sx={{ backgroundColor: "#36393f" }}>
                 <TextField
                   defaultValue="search"
                   size="small"
@@ -101,7 +103,16 @@ export default function Main() {
             <Grid xs={8} sx={{ backgroundColor: "#36393f" }}>
               item
             </Grid>
-            <Grid xs={4} sx={{ backgroundColor: "#2f3136" }} item>
+            <Grid
+              xs={4}
+              sx={{
+                backgroundColor: "#2f3136",
+                maxHeight: "calc(100vh - 20px)",
+                overflow: "scroll",
+                overflowX: "hidden",
+              }}
+              item
+            >
               <RigthColumnOnline></RigthColumnOnline>
               <RigthColumnMember></RigthColumnMember>
               <RigthColumnOffline></RigthColumnOffline>
