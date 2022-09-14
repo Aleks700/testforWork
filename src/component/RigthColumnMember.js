@@ -79,7 +79,7 @@ export default function RigthColumnMember({ avatar }) {
   return (
     <>
       <Box sx={{ px: 2, mb: 3 }}>
-        <Typography>Member - 3</Typography>
+        <Typography sx={{ color: "#5b5b5d" }}>Member - 3</Typography>
         <Stack
           direction="column"
           spacing={2}

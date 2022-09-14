@@ -57,6 +57,7 @@ export default function RigthColumnOnline({ avatar }) {
       boxShadow: `0 0 0 1.5px ${theme.palette.background.paper}`,
       "&::after": {
         position: "absolute",
+        top: "-1px",
         width: "100%",
         height: "100%",
         borderRadius: "50%",
@@ -79,7 +80,7 @@ export default function RigthColumnOnline({ avatar }) {
   return (
     <>
       <Box sx={{ px: 2, mb: 3 }}>
-        <Typography>B.O.T. - 3</Typography>
+        <Typography sx={{ color: "#5b5b5d" }}>B.O.T. - 3</Typography>
         <Stack
           direction="column"
           spacing={2}

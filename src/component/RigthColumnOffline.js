@@ -104,7 +104,7 @@ export default function RigthColumnOffline({ avatar }) {
   return (
     <>
       <Box sx={{ px: 2, mb: 3 }}>
-        <Typography>Offline - 3</Typography>
+        <Typography sx={{ color: "#5b5b5d" }}>Offline - 3</Typography>
         <Stack
           direction="column"
           spacing={2}
