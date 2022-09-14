@@ -17,7 +17,7 @@ function App() {
       <ThemeProvider theme={darkTheme}>
         <Header></Header>
         <Main></Main>
-        <ProfileSideBar></ProfileSideBar>
+        {/* <ProfileSideBar></ProfileSideBar> */}
       </ThemeProvider>
     </>
   );

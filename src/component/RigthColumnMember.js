@@ -13,12 +13,12 @@ import SecondImg from "../img/2.jpg";
 import ThirdImg from "../img/3.jpg";
 import IconButton from "@mui/material/IconButton";
 
-export default function RigthColumnOnline({ avatar }) {
+export default function RigthColumnMember({ avatar }) {
   const OnlineBadge = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
       backgroundColor: "#44b700",
       color: "#44b700",
-      boxShadow: `0 0 0 1.5px #263238`,
+      boxShadow: `0 0 0 1.5px ${theme.palette.background.paper}`,
       "&::after": {
         position: "absolute",
         width: "100%",
@@ -54,7 +54,7 @@ export default function RigthColumnOnline({ avatar }) {
     "& .MuiBadge-badge": {
       backgroundColor: "red",
       color: "red",
-      boxShadow: `0 0 0 1.5px ${theme.palette.background.paper}`,
+      boxShadow: `0 0 0 1.5px #263238`,
       "&::after": {
         position: "absolute",
         width: "100%",
@@ -79,7 +79,7 @@ export default function RigthColumnOnline({ avatar }) {
   return (
     <>
       <Box sx={{ px: 2, mb: 3 }}>
-        <Typography>B.O.T. - 3</Typography>
+        <Typography>Member - 3</Typography>
         <Stack
           direction="column"
           spacing={2}
@@ -100,7 +100,7 @@ export default function RigthColumnOnline({ avatar }) {
             }}
           >
             <IconButton>
-              <OnlineBadge
+              <OfflineBadge
                 overlap="circular"
                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                 variant="dot"
@@ -108,8 +108,9 @@ export default function RigthColumnOnline({ avatar }) {
                 <Avatar sx={{ bgcolor: deepPurple[500] }} src={FirstImg}>
                   <SearchIcon></SearchIcon>
                 </Avatar>
-              </OnlineBadge>
+              </OfflineBadge>
             </IconButton>
+
             <Box sx={{ mx: 1 }}>
               <Typography
                 sx={{
@@ -151,7 +152,7 @@ export default function RigthColumnOnline({ avatar }) {
             }}
           >
             <IconButton>
-              <OnlineBadge
+              <OfflineBadge
                 overlap="circular"
                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                 variant="dot"
@@ -159,7 +160,7 @@ export default function RigthColumnOnline({ avatar }) {
                 <Avatar sx={{ bgcolor: deepPurple[500] }} src={SecondImg}>
                   <SearchIcon></SearchIcon>
                 </Avatar>
-              </OnlineBadge>
+              </OfflineBadge>
             </IconButton>
             <Box sx={{ mx: 1 }}>
               <Typography
@@ -202,7 +203,7 @@ export default function RigthColumnOnline({ avatar }) {
             }}
           >
             <IconButton>
-              <OnlineBadge
+              <OfflineBadge
                 overlap="circular"
                 anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
                 variant="dot"
@@ -210,7 +211,7 @@ export default function RigthColumnOnline({ avatar }) {
                 <Avatar sx={{ bgcolor: deepPurple[500] }} src={ThirdImg}>
                   <SearchIcon></SearchIcon>
                 </Avatar>
-              </OnlineBadge>
+              </OfflineBadge>
             </IconButton>
             <Box sx={{ mx: 1 }}>
               <Typography

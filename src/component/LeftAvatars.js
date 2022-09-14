@@ -4,15 +4,48 @@ import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
 import { styled } from "@mui/material/styles";
-import { deepOrange, deepPurple } from "@mui/material/colors";
+import { deepPurple } from "@mui/material/colors";
 import AddIcon from "@mui/icons-material/Add";
 import SearchIcon from "@mui/icons-material/Search";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+
 import FirstImg from "../img/1.jpg";
 import SecondImg from "../img/2.jpg";
 import ThirdImg from "../img/3.jpg";
 
 export default function LeftAvatars({ avatar }) {
-  const OnlineBadge = styled(Badge)(({ theme }) => ({
+  const MessageBadge = styled(Badge)(({ theme }) => ({
+    "& .MuiBadge-badge": {
+      backgroundColor: "#cd162c",
+      color: "#cd162c",
+      minWidth: "15px",
+      height: "15px",
+      borderRadius: "50%",
+      boxShadow: `0 0 0 3px #263238`,
+      "&::after": {
+        position: "absolute",
+        left: "0",
+        top: "10%",
+        width: "100%",
+        height: "100%",
+        color: "white",
+        fontSize: ".8rem",
+        content: '"2"',
+      },
+      "@keyframes ripple": {
+        "0%": {
+          transform: "scale(.8)",
+          opacity: 1,
+        },
+        "100%": {
+          transform: "scale(1.2)",
+          opacity: 0,
+        },
+      },
+    },
+  }));
+  const MessageAccount = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
       backgroundColor: "#44b700",
       color: "#44b700",
@@ -26,16 +59,6 @@ export default function LeftAvatars({ avatar }) {
         border: "3px solid currentColor",
         content: '""',
       },
-      // '&::before': {
-      //   position: 'absolute',
-      //   color: "black",
-      //   width: '100%',
-      //   height: '100%',
-      //   borderRadius: '50%',
-      //   animation: 'ripple 1.2s infinite ease-in-out',
-      //   border: '1px solid currentColor',
-      //   content: '"3"',
-      // },
       "@keyframes ripple": {
         "0%": {
           transform: "scale(.8)",
@@ -83,55 +106,36 @@ export default function LeftAvatars({ avatar }) {
         sx={{
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          // justifyContent: "center",
           alignItems: "center",
           my: 1,
+          height: "100vh",
         }}
       >
-        <OnlineBadge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          variant="dot"
-        >
-          <Avatar sx={{ bgcolor: deepPurple[500] }} src={FirstImg}>
+        <IconButton>
+          <MessageBadge
+            overlap="circular"
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            variant="dot"
+          >
+            <Avatar sx={{ bgcolor: deepPurple[500] }} src={FirstImg}>
+              <SearchIcon></SearchIcon>
+            </Avatar>
+          </MessageBadge>
+        </IconButton>
+        <IconButton>
+          <Avatar sx={{ bgcolor: "#39e6e9" }}>H</Avatar>
+        </IconButton>
+        <IconButton>
+          <Avatar sx={{ bgcolor: "#757575" }}>
             <SearchIcon></SearchIcon>
           </Avatar>
-        </OnlineBadge>
-        <OnlineBadge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          variant="dot"
-        >
-          <Avatar sx={{ bgcolor: deepPurple[500] }} src={SecondImg}>
-            <SearchIcon></SearchIcon>
+        </IconButton>
+        <IconButton>
+          <Avatar sx={{ bgcolor: "#757575" }}>
+            <AddIcon></AddIcon>
           </Avatar>
-        </OnlineBadge>
-        <OnlineBadge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          variant="dot"
-        >
-          <Avatar sx={{ bgcolor: deepPurple[500] }} src={ThirdImg}>
-            <SearchIcon></SearchIcon>
-          </Avatar>
-        </OnlineBadge>
-        <OfflineBadge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          variant="dot"
-        >
-          <Avatar sx={{ bgcolor: deepPurple[500] }} src={ThirdImg}>
-            <SearchIcon></SearchIcon>
-          </Avatar>
-        </OfflineBadge>
-
-        <Avatar>H</Avatar>
-        <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
-        <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
-        <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
-        <Avatar sx={{ bgcolor: deepPurple[500] }}>
-          <AddIcon></AddIcon>
-        </Avatar>
+        </IconButton>
       </Stack>
     </>
   );
