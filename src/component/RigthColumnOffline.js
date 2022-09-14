@@ -11,7 +11,7 @@ import FirstImg from "../img/1.jpg";
 import SecondImg from "../img/2.jpg";
 import ThirdImg from "../img/3.jpg";
 
-export default function LeftAvatars({ avatar }) {
+export default function RigthColumnOffline({ avatar }) {
   const OnlineBadge = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
       backgroundColor: "#44b700",
@@ -124,7 +124,6 @@ export default function LeftAvatars({ avatar }) {
             <SearchIcon></SearchIcon>
           </Avatar>
         </OfflineBadge>
-
         <Avatar>H</Avatar>
         <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
         <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>

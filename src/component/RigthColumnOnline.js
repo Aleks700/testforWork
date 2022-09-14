@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import Stack from "@mui/material/Stack";
 import Avatar from "@mui/material/Avatar";
 import Badge from "@mui/material/Badge";
+import { Typography } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import { deepOrange, deepPurple } from "@mui/material/colors";
 import AddIcon from "@mui/icons-material/Add";
@@ -11,7 +12,7 @@ import FirstImg from "../img/1.jpg";
 import SecondImg from "../img/2.jpg";
 import ThirdImg from "../img/3.jpg";
 
-export default function LeftAvatars({ avatar }) {
+export default function RigthColumnOnline({ avatar }) {
   const OnlineBadge = styled(Badge)(({ theme }) => ({
     "& .MuiBadge-badge": {
       backgroundColor: "#44b700",
@@ -58,7 +59,6 @@ export default function LeftAvatars({ avatar }) {
         width: "100%",
         height: "100%",
         borderRadius: "50%",
-
         // border: '3px solid currentColor',
         content: '""',
       },
@@ -88,15 +88,56 @@ export default function LeftAvatars({ avatar }) {
           my: 1,
         }}
       >
-        <OnlineBadge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          variant="dot"
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            marginLeft: "2rem",
+            width: "100%",
+          }}
         >
-          <Avatar sx={{ bgcolor: deepPurple[500] }} src={FirstImg}>
-            <SearchIcon></SearchIcon>
-          </Avatar>
-        </OnlineBadge>
+          <OnlineBadge
+            overlap="circular"
+            anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
+            variant="dot"
+          >
+            <Avatar sx={{ bgcolor: deepPurple[500] }} src={FirstImg}>
+              <SearchIcon></SearchIcon>
+            </Avatar>
+          </OnlineBadge>
+          <Box sx={{ mx: 1 }}>
+            <Typography
+              sx={{
+                lineHeight: "15px",
+                color: "#55e272",
+              }}
+            >
+              Name
+            </Typography>
+            <Stack sx={{ display: "flex", flexDirection: "row" }}>
+              <Typography
+                sx={{
+                  lineHeight: "15px",
+                  fontSize: ".7rem",
+                  color: "#26edea",
+                  mr: 1,
+                }}
+              >
+                Playing
+              </Typography>
+              <Typography
+                sx={{
+                  lineHeight: "15px",
+                  fontSize: ".7rem",
+                  color: "black",
+                }}
+              >
+                World of Tanks 1
+              </Typography>
+            </Stack>
+          </Box>
+        </Box>
+
         <OnlineBadge
           overlap="circular"
           anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
@@ -115,23 +156,6 @@ export default function LeftAvatars({ avatar }) {
             <SearchIcon></SearchIcon>
           </Avatar>
         </OnlineBadge>
-        <OfflineBadge
-          overlap="circular"
-          anchorOrigin={{ vertical: "bottom", horizontal: "right" }}
-          variant="dot"
-        >
-          <Avatar sx={{ bgcolor: deepPurple[500] }} src={ThirdImg}>
-            <SearchIcon></SearchIcon>
-          </Avatar>
-        </OfflineBadge>
-
-        <Avatar>H</Avatar>
-        <Avatar sx={{ bgcolor: deepOrange[500] }}>N</Avatar>
-        <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
-        <Avatar sx={{ bgcolor: deepPurple[500] }}>OP</Avatar>
-        <Avatar sx={{ bgcolor: deepPurple[500] }}>
-          <AddIcon></AddIcon>
-        </Avatar>
       </Stack>
     </>
   );
